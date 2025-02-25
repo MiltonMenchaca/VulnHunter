@@ -1,0 +1,15 @@
+{
+    "fecha": "2025-02-19T10:22:58.974297",
+    "logs": [
+        "Intentando conectar a Metasploit...",
+        "Conexi\u00f3n a Metasploit exitosa.",
+        "Cargando m\u00f3dulos...",
+        "M\u00f3dulos cargados exitosamente.",
+        "B\u00fasqueda completada: 'cmd' en Exploits.",
+        "No se pudo obtener informaci\u00f3n para el m\u00f3dulo 'linux/http/grandstream_gxv31xx_settimezone_unauth_cmd_exec'.",
+        "No se pudo obtener informaci\u00f3n para el m\u00f3dulo 'android/meterpreter/reverse_http'.",
+        "Cargando m\u00f3dulos...",
+        "Recargando todos los m\u00f3dulos.",
+        "M\u00f3dulos cargados exitosamente."
+    ]
+}

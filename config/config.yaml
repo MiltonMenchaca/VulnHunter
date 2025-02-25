@@ -1,0 +1,68 @@
+# Configuraciones generales
+app:
+  name: Vuln Hunter
+  version: 1.0
+  theme: dark  # Opciones: dark, light
+  color_theme: green
+  logo_path: logo.png  # Ruta del logo
+
+# Configuraciones de concurrencia
+concurrency:
+  max_workers: 10  # Máximo número de hilos/trabajadores
+  timeout: 60  # Tiempo límite para tareas en segundos
+
+# Configuraciones de red
+network:
+  default_interface: eth0  # Interfaz de red predeterminada
+  scan_timeout: 10  # Timeout para escaneos en segundos
+  max_retries: 3  # Reintentos en caso de fallo
+
+# Configuraciones de herramientas
+tools:
+  osint:
+    shodan_api_key: "YOUR_SHODAN_API_KEY"
+    virustotal_api_key: "YOUR_VIRUSTOTAL_API_KEY"
+    max_results: 50
+  nmap:
+    default_args: "-sS -Pn"
+    max_hosts: 256
+  sqlmap:
+    default_args: "--batch --risk=3 --level=5"
+  hydra:
+    default_args: "-l admin -P passwords.txt"
+  wfuzz:
+    wordlist_path: "/usr/share/wordlists/common.txt"
+  sniffer:
+    packet_limit: 1000
+    save_pcap: true  # Guardar capturas en formato PCAP
+  xss:
+    payload_list: "/path/to/xss_payloads.txt"
+  reports:
+    save_path: reports/  # Carpeta para guardar reportes
+
+# Configuración de logs
+logging:
+  level: DEBUG  # Opciones: DEBUG, INFO, WARNING, ERROR
+  file_path: logs/app.log  # Archivo de log
+  rotation: daily  # Opciones: daily, weekly, size_limit
+
+# Configuración de base de datos
+database:
+  type: sqlite  # Opciones: sqlite, mysql, postgresql
+  path: vuln_hunter.db  # Para SQLite
+  host: localhost
+  port: 3306
+  username: root
+  password: password
+
+# Configuración de pentesting
+pentesting:
+  modes:
+    - reconnaissance
+    - enumeration
+    - exploitation
+    - post_exploitation
+    - reporting
+  output_format: json  # Opciones: json, txt, pdf
+  auto_save: true
+  plugins_enabled: true

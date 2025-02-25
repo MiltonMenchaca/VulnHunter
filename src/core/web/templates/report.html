@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vulnerability Report - VulnHunter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+        .risk-level {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+        }
+        .risk-CRITICAL { background-color: #dc3545; }
+        .risk-HIGH { background-color: #fd7e14; }
+        .risk-MEDIUM { background-color: #ffc107; }
+        .risk-LOW { background-color: #28a745; }
+        
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .vulnerability {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .evidence {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Vulnerability Report</h1>
+            <p>Generated on: {{ timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+            <div class="risk-level risk-{{ risk_level }}">
+                Risk Level: {{ risk_level }}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <table>
+                <tr>
+                    <th>Total Vulnerabilities</th>
+                    <td>{{ summary.total_vulnerabilities }}</td>
+                </tr>
+                <tr>
+                    <th>Types of Vulnerabilities</th>
+                    <td>{{ summary.types|join(', ') }}</td>
+                </tr>
+                <tr>
+                    <th>WAF Detected</th>
+                    <td>{{ 'Yes' if summary.waf_present else 'No' }}</td>
+                </tr>
+            </table>
+
+            {% if summary.critical_findings %}
+            <h3>Critical Findings</h3>
+            <ul>
+                {% for finding in summary.critical_findings %}
+                <li>{{ finding }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        {% if results.waf %}
+        <div class="section">
+            <h2>WAF Detection</h2>
+            <p>A WAF of type: <strong>{{ results.waf.type }}</strong> was detected</p>
+            <h3>Recommended Bypass Techniques:</h3>
+            <ul>
+                {% for technique in results.waf.bypass_techniques %}
+                <li>{{ technique }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if results.xxe %}
+        <div class="section">
+            <h2>XXE Vulnerabilities</h2>
+            {% for vuln in results.xxe %}
+            <div class="vulnerability">
+                <h3>XXE on {{ vuln.endpoint }}</h3>
+                <p><strong>Payload used:</strong></p>
+                <div class="evidence">{{ vuln.payload }}</div>
+                {% if vuln.evidence %}
+                <p><strong>Evidence:</strong></p>
+                <div class="evidence">{{ vuln.evidence }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if results.lfi_via_xxe %}
+        <div class="section">
+            <h2>LFI via XXE</h2>
+            {% for vuln in results.lfi_via_xxe %}
+            <div class="vulnerability">
+                <h3>LFI via XXE on {{ vuln.endpoint }}</h3>
+                <p><strong>Payload used:</strong></p>
+                <div class="evidence">{{ vuln.payload }}</div>
+                {% if vuln.evidence %}
+                <p><strong>Evidence:</strong></p>
+                <div class="evidence">{{ vuln.evidence }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if results.lfi_rfi %}
+        <div class="section">
+            <h2>LFI/RFI Vulnerabilities</h2>
+            {% for vuln in results.lfi_rfi %}
+            <div class="vulnerability">
+                <h3>{{ vuln.vuln_type }} on {{ vuln.param }}</h3>
+                <p><strong>Payload used:</strong></p>
+                <div class="evidence">{{ vuln.payload }}</div>
+                {% if vuln.evidence %}
+                <p><strong>Evidence:</strong></p>
+                <div class="evidence">{{ vuln.evidence }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

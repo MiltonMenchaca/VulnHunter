@@ -1,0 +1,14 @@
+customtkinter
+pyperclip
+fpdf
+requests
+scapy
+netifaces
+python-nmap
+psutil
+requests
+beautifulsoup4
+pymetasploit3
+pyyaml
+Pillow
+cryptography

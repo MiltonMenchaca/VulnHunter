@@ -1,0 +1,403 @@
+2025-02-19 16:11:13,265 - MetasploitWindow - ERROR - Error cargando módulos: 'MetasploitConnectionManager' object has no attribute 'list_exploits'
+2025-02-19 16:11:26,918 - MetasploitWindow - ERROR - Error cargando módulos: 'MetasploitConnectionManager' object has no attribute 'list_exploits'
+2025-02-19 16:11:26,964 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:11:31,972 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:11:36,980 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:11:41,987 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:11:46,993 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:11:52,002 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:11:57,025 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:02,037 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:07,051 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:12,057 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:16,165 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:12:17,062 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:18,542 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:22,068 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:27,075 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:12:32,084 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:16:52,501 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:17:05,355 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:17:05,356 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:17:05,827 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:10,835 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:15,841 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:18,402 - MetasploitWindow - ERROR - Error mostrando información del módulo: 'MetasploitConnectionManager' object has no attribute 'get_exploit_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 532, in _show_module_info
+    info = self.msf_manager.get_exploit_info(module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_exploit_info'
+2025-02-19 16:17:20,134 - MetasploitWindow - ERROR - Error mostrando información del módulo: 'MetasploitConnectionManager' object has no attribute 'get_exploit_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 532, in _show_module_info
+    info = self.msf_manager.get_exploit_info(module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_exploit_info'
+2025-02-19 16:17:20,849 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:21,940 - MetasploitWindow - ERROR - Error mostrando información del módulo: 'MetasploitConnectionManager' object has no attribute 'get_payload_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 534, in _show_module_info
+    info = self.msf_manager.get_payload_info(module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_payload_info'
+2025-02-19 16:17:23,965 - MetasploitWindow - ERROR - Error mostrando información del módulo: 'MetasploitConnectionManager' object has no attribute 'get_auxiliary_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 536, in _show_module_info
+    info = self.msf_manager.get_auxiliary_info(module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_auxiliary_info'
+2025-02-19 16:17:25,855 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:30,860 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:35,870 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:40,875 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:45,886 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:50,897 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:17:55,908 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:00,914 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:05,924 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:10,930 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:15,937 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:20,942 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:25,950 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:30,955 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:35,960 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:40,971 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:45,979 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:50,987 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:18:55,993 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:19:00,999 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:19:06,005 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:19:11,013 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:19:16,020 - MetasploitWindow - ERROR - Error actualizando sesiones: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-19 16:19:32,087 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:19:44,203 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:19:44,203 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:19:44,257 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:19:49,267 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:19:54,279 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:19:59,293 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:04,301 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:09,312 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:14,323 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:19,336 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:24,345 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:29,353 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:34,365 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:39,373 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:44,384 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:49,396 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:54,407 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:20:59,415 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:04,429 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:09,439 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:14,451 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:19,459 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:24,469 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:29,485 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:34,492 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:39,509 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:44,524 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:49,540 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:54,569 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:21:59,578 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:04,587 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:09,599 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:14,607 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:19,623 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:24,632 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:29,640 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:34,651 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:39,663 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:44,675 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:49,690 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:54,699 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:22:59,708 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:04,720 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:09,730 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:14,745 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:19,754 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:24,763 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:29,774 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:34,790 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:39,805 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:23:45,879 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:24:30,323 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:24:31,784 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:25:43,949 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:29:39,816 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:29:52,388 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:29:52,388 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:29:52,463 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:29:57,470 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:02,482 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:07,493 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:12,503 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:17,520 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:22,532 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:27,541 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:32,549 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:37,560 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:42,568 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:47,581 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:52,590 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:30:57,600 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:02,615 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:07,627 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:12,634 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:17,644 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:22,651 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:27,671 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:29,850 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:31:32,691 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:37,701 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:40,825 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:31:40,825 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:31:40,879 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:45,892 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:50,905 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:31:55,918 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:00,940 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:05,954 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:10,970 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:16,000 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:21,034 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:26,059 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:31,076 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:36,096 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:41,110 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:46,132 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:32:49,173 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:33:00,307 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:33:00,307 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:33:00,368 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:33:58,515 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:34:09,626 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:34:09,627 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:34:09,661 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:35:32,081 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:15,129 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:37:25,831 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:37:25,831 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:37:25,867 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:30,883 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:35,901 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:40,916 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:45,929 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:50,946 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:37:55,957 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:00,971 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:05,990 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:11,010 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:16,027 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:21,037 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:26,054 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:31,075 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:36,088 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:41,110 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:46,140 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:51,154 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:38:56,182 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:01,199 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:06,212 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:11,229 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:16,242 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:21,257 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:26,283 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:31,301 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:36,317 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:41,331 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:46,345 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:51,358 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:39:56,381 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:40:01,394 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:40:06,414 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:40:11,434 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:40:16,451 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:41:12,215 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:41:23,218 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:41:23,218 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:41:23,257 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:41:28,274 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:41:38,563 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:41:43,576 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:41:54,512 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:41:59,526 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:04,552 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:09,564 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:14,577 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:19,592 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:24,686 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:29,701 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:34,717 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:39,763 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:44,781 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:49,806 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:54,819 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:42:59,842 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:44:17,016 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:44:27,906 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 16:44:27,907 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 16:44:27,959 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:44:42,762 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:44:47,779 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:44:52,794 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:03,145 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:18,192 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:23,209 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:35,428 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:40,442 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:45,459 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:45:50,475 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:02,479 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:07,495 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:12,507 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:22,761 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:27,773 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:38,832 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:43,849 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:48,870 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:53,890 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:46:58,902 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:12,318 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:17,332 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:22,358 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:27,370 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:32,388 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:37,410 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 16:47:57,629 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:13:28,585 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 17:13:41,297 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 17:13:41,298 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 17:13:41,343 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:03,850 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:08,865 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:13,884 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:18,903 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:23,917 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:28,935 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:51,038 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:14:56,049 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:01,060 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:06,088 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:11,106 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:16,118 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:21,130 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:26,149 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:31,160 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:52,949 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:15:57,962 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:16:02,976 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:16:07,989 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:16:33,042 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:16:38,059 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:01,449 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:06,461 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:11,482 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:16,514 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:21,531 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:44,716 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:49,727 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:54,737 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:17:59,748 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:04,765 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:09,781 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:14,800 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:19,815 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:24,826 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:29,838 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:34,849 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:39,865 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:44,877 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:49,897 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:54,909 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:18:59,923 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:04,933 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:09,945 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:14,961 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:19,038 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 17:19:30,204 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 17:19:30,205 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 17:19:30,261 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:35,275 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:40,286 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:45,298 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:50,314 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:19:55,334 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:20:00,354 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:20:05,370 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:20:10,383 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:20:15,399 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:20:20,410 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 17:20:25,428 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:00,207 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 18:39:11,354 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 18:39:11,354 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 18:39:11,725 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:16,122 - MetasploitWindow - ERROR - Error mostrando información: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 532, in _show_module_info
+    info = self.msf_manager.get_module_info(module_type, module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+2025-02-19 18:39:16,742 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:21,167 - MetasploitWindow - ERROR - Error mostrando información: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 532, in _show_module_info
+    info = self.msf_manager.get_module_info(module_type, module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+2025-02-19 18:39:21,759 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:29,527 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 18:39:40,417 - MetasploitWindow - INFO - Módulos cargados exitosamente
+2025-02-19 18:39:40,417 - MetasploitWindow - INFO - Reconexión exitosa con Metasploit
+2025-02-19 18:39:40,469 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:45,485 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:50,507 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:39:50,920 - MetasploitWindow - ERROR - Error mostrando información: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 532, in _show_module_info
+    info = self.msf_manager.get_module_info(module_type, module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+2025-02-19 18:39:55,523 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:00,538 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:05,558 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:10,571 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:15,585 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:20,599 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:25,631 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:30,642 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:31,536 - MetasploitWindow - ERROR - Error mostrando información: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 532, in _show_module_info
+    info = self.msf_manager.get_module_info(module_type, module_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MetasploitConnectionManager' object has no attribute 'get_module_info'
+2025-02-19 18:40:35,663 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:40,687 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:45,708 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:50,719 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:40:55,750 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:41:00,787 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:41:05,804 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:41:10,963 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:41:15,978 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 18:41:21,007 - MetasploitWindow - INFO - Sesiones actualizadas: 0 activas
+2025-02-19 19:07:11,493 - MetasploitWindow - ERROR - Error mostrando información: can't invoke "grab" command: application has been destroyed
+Traceback (most recent call last):
+  File "/home/percival/Desktop/VulnHunter/ui/windows/metasploit.py", line 475, in _show_module_info
+    messagebox.showerror("Error", "No se pudo obtener la información del módulo")
+  File "/usr/lib/python3.11/tkinter/messagebox.py", line 98, in showerror
+    return _show(title, message, ERROR, OK, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/tkinter/messagebox.py", line 76, in _show
+    res = Message(**options).show()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/tkinter/commondialog.py", line 45, in show
+    s = master.tk.call(self.command, *master._options(self.options))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: can't invoke "grab" command: application has been destroyed
+2025-02-19 20:35:10,604 - MetasploitWindow - DEBUG - Se encontraron 2484 exploits.
+2025-02-19 20:35:10,916 - MetasploitWindow - DEBUG - Se encontraron 1458 payloads.
+2025-02-19 20:35:11,021 - MetasploitWindow - DEBUG - Se encontraron 1279 auxiliares.

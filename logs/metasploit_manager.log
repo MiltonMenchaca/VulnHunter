@@ -1,0 +1,304 @@
+2025-02-19 18:58:45,168 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558ffa0c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:58:46,343 - MetasploitManager - ERROR - Error listando exploits: No hay conexión con Metasploit
+2025-02-19 18:58:46,343 - MetasploitManager - ERROR - Error listando payloads: No hay conexión con Metasploit
+2025-02-19 18:58:46,343 - MetasploitManager - ERROR - Error listando módulos auxiliares: No hay conexión con Metasploit
+2025-02-19 18:58:48,346 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe54f90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:58:49,475 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f559003efd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:58:50,342 - MetasploitManager - ERROR - Error obteniendo sesiones: No hay conexión con Metasploit
+2025-02-19 18:58:54,991 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe54590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:58:57,492 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f559003de10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:58:58,003 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe54c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:58:58,008 - MetasploitManager - ERROR - Error obteniendo sesiones: No hay conexión con Metasploit
+2025-02-19 18:59:02,261 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f559003f010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:05,267 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe7ee10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:05,272 - MetasploitManager - ERROR - Error obteniendo sesiones: No hay conexión con Metasploit
+2025-02-19 18:59:06,019 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe70990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:11,065 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe724d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:14,029 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f559003d8d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:14,070 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe7f950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:17,074 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f559003efd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:20,077 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe61050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 18:59:20,083 - MetasploitManager - ERROR - Error obteniendo sesiones: No hay conexión con Metasploit
+2025-02-19 18:59:23,088 - MetasploitManager - ERROR - Error conectando a Metasploit: HTTPConnectionPool(host='127.0.0.1', port=55553): Max retries exceeded with url: /api/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f558fe7f050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-02-19 19:02:09,113 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:02:15,209 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:02:18,843 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:02:44,599 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:02:50,433 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:02:55,314 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 19:04:01,351 - MetasploitManager - INFO - Iniciando servicio msfrpcd...
+2025-02-19 19:04:09,418 - MetasploitManager - INFO - Servicio msfrpcd iniciado correctamente
+2025-02-19 19:06:28,755 - MetasploitManager - INFO - Iniciando servicio msfrpcd...
+2025-02-19 19:06:36,797 - MetasploitManager - INFO - Servicio msfrpcd iniciado correctamente
+2025-02-19 19:06:37,040 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:06:37,087 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:06:40,459 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:06:52,793 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 19:10:33,151 - MetasploitManager - INFO - Iniciando servicio msfrpcd...
+2025-02-19 19:10:41,204 - MetasploitManager - INFO - Servicio msfrpcd iniciado correctamente
+2025-02-19 19:10:41,420 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:10:44,798 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:10:55,939 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 19:12:00,948 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 19:12:00,965 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:12:03,682 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:12:09,105 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 19:22:30,806 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 19:22:31,010 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:22:36,264 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:43:48,747 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 19:43:48,796 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 19:43:52,206 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:43:55,761 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:43:58,965 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:44:18,207 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:50:59,119 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:52:29,906 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:52:32,243 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:54:57,595 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:55:00,873 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:57:38,471 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 19:58:16,516 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:59:35,132 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 19:59:37,717 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 20:00:32,514 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:00:34,302 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 20:13:13,109 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 20:13:13,117 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 20:13:34,251 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:14:23,412 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:14:25,858 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-19 20:19:53,811 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 20:19:53,819 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 20:19:57,153 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:19:57,283 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:19:58,157 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:20:00,702 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:01,591 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:02,297 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:02,482 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:02,974 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:03,118 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:09,009 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:09,155 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:09,308 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:09,693 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:20:14,349 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:20:14,664 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:20:14,821 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:20:14,975 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:20:15,328 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:20:15,480 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:20:15,613 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:21:19,705 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 20:21:19,711 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 20:21:21,518 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:21:21,668 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:21:22,016 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:21:22,180 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:21:25,561 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:21:25,710 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:21:25,851 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:21:26,429 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:22:53,916 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 20:22:53,925 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 20:22:55,843 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:22:56,481 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:09,391 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-19 20:35:09,401 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-19 20:35:11,236 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:11,242 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:11,244 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:12,046 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:12,054 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:12,056 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:12,555 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:12,563 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:12,565 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:13,033 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:13,043 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:13,044 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:13,515 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:13,522 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:13,523 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:14,024 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:14,030 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:14,032 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:14,677 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:14,686 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:14,688 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:15,282 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:15,289 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:15,292 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:16,403 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:16,404 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:16,410 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:17,269 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:17,271 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:17,277 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:18,333 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:18,335 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:18,337 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:18,895 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:18,897 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:18,898 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-19 20:35:21,296 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'list' object has no attribute 'info'
+2025-02-19 20:35:21,297 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-19 20:35:21,299 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-21 18:28:59,572 - MetasploitManager - INFO - Iniciando servicio msfrpcd...
+2025-02-21 18:29:01,614 - MetasploitManager - INFO - Ejecutando comando: msfrpcd -P abc123 -S -a 127.0.0.1 -p 55553
+2025-02-21 18:29:07,630 - MetasploitManager - INFO - Servicio msfrpcd iniciado correctamente
+2025-02-21 18:29:09,630 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:29:09,903 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:29:47,916 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'exploit'
+2025-02-21 18:30:23,071 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:30:23,078 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:30:27,347 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-21 18:30:35,331 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-21 18:30:38,683 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-21 18:30:41,716 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-21 18:30:42,902 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-21 18:31:12,314 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:31:12,320 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:31:16,012 - MetasploitManager - ERROR - Error obteniendo código fuente: 'ModuleManager' object has no attribute 'source'
+2025-02-21 18:36:48,676 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:36:48,683 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:37:46,747 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:37:46,773 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:45:24,006 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:45:24,014 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:45:37,005 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit exploit/android/fileformat/adobe_reader_pdf_js_interface; exit'' timed out after 10 seconds
+2025-02-21 18:46:06,835 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_http; exit'' timed out after 10 seconds
+2025-02-21 18:46:21,913 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/https/mips64/meterpreter_reverse_http; exit'' timed out after 10 seconds
+2025-02-21 18:48:34,940 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-21 18:48:34,946 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-21 18:48:54,568 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_https; exit'' timed out after 10 seconds
+2025-02-21 18:49:36,575 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_https; exit'' timed out after 10 seconds
+2025-02-21 18:50:00,782 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-21 18:50:03,026 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-22 06:20:57,231 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:20:58,159 - MetasploitManager - ERROR - Error conectando a Metasploit: 'MsfRPC: Authentication failed'
+2025-02-22 06:20:59,359 - MetasploitManager - ERROR - Error listando exploits: No hay conexión con Metasploit
+2025-02-22 06:20:59,360 - MetasploitManager - ERROR - Error listando payloads: No hay conexión con Metasploit
+2025-02-22 06:20:59,360 - MetasploitManager - ERROR - Error listando módulos auxiliares: No hay conexión con Metasploit
+2025-02-22 06:21:01,955 - MetasploitManager - INFO - Iniciando servicio msfrpcd...
+2025-02-22 06:21:03,977 - MetasploitManager - INFO - Ejecutando comando: msfrpcd -P abc123 -S -a 127.0.0.1 -p 55553
+2025-02-22 06:21:07,986 - MetasploitManager - INFO - Servicio msfrpcd iniciado correctamente
+2025-02-22 06:21:09,987 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:21:10,110 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:21:16,763 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-22 06:21:28,439 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_https; exit'' timed out after 10 seconds
+2025-02-22 06:21:56,113 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-22 06:22:07,532 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_tcp; exit'' timed out after 10 seconds
+2025-02-22 06:22:40,910 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_tcp; exit'' timed out after 10 seconds
+2025-02-22 06:26:34,355 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:26:34,367 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:26:55,983 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/cmd/linux/http/mips64/meterpreter_reverse_http; exit'' timed out after 10 seconds
+2025-02-22 06:27:24,228 - MetasploitManager - ERROR - Error obteniendo info del módulo: 'ModuleManager' object has no attribute 'payload'
+2025-02-22 06:28:48,486 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:28:48,493 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:29:02,743 - MetasploitManager - DEBUG - Error usando msfconsole: Command 'msfconsole -q -x 'edit payload/aix/ppc/shell_find_port; exit'' timed out after 10 seconds
+2025-02-22 06:49:57,891 - INFO - Configuración cargada desde config.yaml.
+2025-02-22 06:49:57,891 - INFO - Nmap está instalado en: /usr/bin/nmap
+2025-02-22 06:49:58,182 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-22 06:49:58,182 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-22 06:49:58,182 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-22 06:50:01,923 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:50:01,923 - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:50:01,924 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:01,927 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 59
+2025-02-22 06:50:01,928 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:01,929 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 18
+2025-02-22 06:50:01,930 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:01,932 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:01,932 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:50:01,932 - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:50:02,176 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:02,178 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:03,178 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:03,179 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:03,180 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:03,195 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 91592
+2025-02-22 06:50:03,838 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:03,840 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:03,841 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:03,861 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 56991
+2025-02-22 06:50:04,015 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:04,017 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:04,018 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:04,025 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 41241
+2025-02-22 06:50:07,176 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:07,178 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:07,179 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:07,180 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 1
+2025-02-22 06:50:07,181 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:07,183 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:12,182 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:12,184 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:50:12,185 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:50:12,186 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 1
+2025-02-22 06:51:08,528 - INFO - Configuración cargada desde config.yaml.
+2025-02-22 06:51:08,528 - INFO - Nmap está instalado en: /usr/bin/nmap
+2025-02-22 06:51:08,826 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-22 06:51:08,826 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-22 06:51:08,826 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-22 06:51:12,795 - MetasploitManager - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:51:12,795 - INFO - Intentando conectar a Metasploit RPC...
+2025-02-22 06:51:12,796 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:12,798 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 59
+2025-02-22 06:51:12,800 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:12,801 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 18
+2025-02-22 06:51:12,802 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:12,803 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:12,804 - MetasploitManager - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:51:12,804 - INFO - Conectado a Metasploit RPC. Versión: {'version': '6.4.43-dev', 'ruby': '3.1.2 x86_64-linux-gnu 2022-04-12', 'api': '1.0'}
+2025-02-22 06:51:13,024 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:13,025 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:14,024 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:14,026 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:14,027 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:14,034 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 91592
+2025-02-22 06:51:14,677 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:14,678 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:14,680 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:14,693 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 56991
+2025-02-22 06:51:14,799 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:14,800 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:14,801 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:14,830 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 41241
+2025-02-22 06:51:16,655 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:16,657 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:17,656 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:17,658 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:17,659 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:17,665 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 91592
+2025-02-22 06:51:18,024 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,026 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:18,027 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,028 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 1
+2025-02-22 06:51:18,028 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,030 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:18,079 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,080 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:18,081 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,094 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 56991
+2025-02-22 06:51:18,213 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,215 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 72
+2025-02-22 06:51:18,216 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:55553
+2025-02-22 06:51:18,221 - DEBUG - http://127.0.0.1:55553 "POST /api/ HTTP/1.1" 200 41241
+2025-02-22 06:51:42,842 - INFO - Configuración cargada desde config.yaml.
+2025-02-22 06:51:42,842 - INFO - Nmap está instalado en: /usr/bin/nmap
+2025-02-22 06:51:43,106 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-22 06:51:43,107 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-22 06:51:43,107 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-22 06:53:11,601 - INFO - Configuración cargada desde config.yaml.
+2025-02-22 06:53:11,601 - INFO - Nmap está instalado en: /usr/bin/nmap
+2025-02-22 06:53:11,888 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-22 06:53:11,888 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-22 06:53:11,888 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-22 06:53:16,295 - WARNING - No se tienen privilegios de root para leer la MAC (puede fallar).
+2025-02-22 06:53:16,295 - DEBUG - Ejecutando comando: ip link show ens33
+2025-02-22 06:53:16,305 - INFO - Interfaz cambiada a ens33 (MAC: 00:0c:29:ea:58:09)
+2025-02-22 06:53:19,740 - WARNING - No se tienen privilegios de root para leer la MAC (puede fallar).
+2025-02-22 06:53:19,740 - DEBUG - Ejecutando comando: ip link show ens33
+2025-02-22 06:53:19,744 - INFO - Interfaz cambiada a ens33 (MAC: 00:0c:29:ea:58:09)

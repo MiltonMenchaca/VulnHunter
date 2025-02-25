@@ -1,0 +1,14 @@
+2025-02-24 17:02:07,341 - MetasploitWindow - ERROR - Error in monitoring: 'bool' object is not callable
+2025-02-24 17:02:08,323 - MetasploitWindow - ERROR - Error loading modules: 'MetasploitConnectionManager' object has no attribute 'list_exploits'
+2025-02-24 17:02:11,658 - MetasploitWindow - ERROR - Error loading modules: 'MetasploitConnectionManager' object has no attribute 'list_exploits'
+2025-02-24 17:02:12,323 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:12,343 - MetasploitWindow - ERROR - Error in monitoring: 'bool' object is not callable
+2025-02-24 17:02:16,629 - MetasploitWindow - ERROR - Error loading modules: 'MetasploitConnectionManager' object has no attribute 'list_exploits'
+2025-02-24 17:02:17,175 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:17,323 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:22,176 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:22,325 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:27,177 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:27,327 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:32,177 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
+2025-02-24 17:02:32,327 - MetasploitWindow - ERROR - Error updating sessions: 'MetasploitConnectionManager' object has no attribute 'get_sessions'
