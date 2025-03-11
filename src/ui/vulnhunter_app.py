@@ -1,25 +1,18 @@
 import os
 import logging
 import customtkinter as ctk
+import tkinter as tk
 from PIL import Image
 from pathlib import Path
 import sys
-
-# Configure logging
-logging.basicConfig(
-    filename='logs/vulnhunter.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
 
 # Ensure the project's root directory is in PYTHONPATH
 project_root = Path(__file__).parent.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-# Import and apply global theme
-from src.ui.theme import COLORS, apply_theme
-apply_theme()
+# Import theme colors
+from src.ui.theme import COLORS
 
 # Import tool windows
 from src.ui.windows.metasploit import MetasploitWindow
@@ -67,9 +60,14 @@ class VulnHunterApp(ctk.CTk):
 
     def _setup_window(self):
         """Sets up window size and position."""
+        # Configurar el tamaño mínimo de la ventana
+        self.minsize(800, 600)
+        
+        # Tamaño preferido
         window_width = 1200
         window_height = 800
         
+        # Centrar en la pantalla
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         pos_top = int((screen_height / 2) - (window_height / 2))
@@ -77,6 +75,16 @@ class VulnHunterApp(ctk.CTk):
         
         # Apply geometry
         self.geometry(f"{window_width}x{window_height}+{pos_right}+{pos_top}")
+        
+        # Configurar el título con un icono si está disponible
+        self.title("VulnHunter - Advanced Web Vulnerability Scanner")
+        
+        try:
+            icon_path = Path(__file__).parent / "assets" / "icon.ico"
+            if icon_path.exists():
+                self.iconbitmap(icon_path)
+        except Exception as e:
+            logging.warning(f"Could not load icon: {e}")
         
         # Configure main grid
         self.grid_rowconfigure(0, weight=1)
@@ -98,8 +106,8 @@ class VulnHunterApp(ctk.CTk):
         # Load the logo (displayed on the sidebar)
         self._load_logo()
         
-        # (Optional) Create a tools menu
-        self._create_tools_menu()
+        # Create menu
+        self._create_menu()
 
     def _create_sidebar(self) -> ctk.CTkScrollableFrame:
         """Creates the scrollable sidebar with phases and tool buttons."""
@@ -123,17 +131,37 @@ class VulnHunterApp(ctk.CTk):
             ("PHASE 6: REPORTING", [("Generate Report", "Reportes")]),
         ]
         
+        # Crear un botón para la pantalla de inicio
+        home_button = ctk.CTkButton(
+            sidebar,
+            text="Home",
+            width=180,
+            height=40,
+            command=lambda: self.show_subframe("Home"),
+            fg_color=self.colors["accent"],
+            hover_color=self.colors["button_hover"],
+            text_color=self.colors["background"]
+        )
+        home_button.pack(pady=(0, 15))
+        
         # Create phase labels and tool buttons
         for phase_title, tools in self.phases:
-            ctk.CTkLabel(
+            phase_frame = ctk.CTkFrame(
                 sidebar,
+                fg_color="transparent"
+            )
+            phase_frame.pack(fill="x", pady=(10, 5))
+            
+            phase_label = ctk.CTkLabel(
+                phase_frame,
                 text=phase_title,
                 font=ctk.CTkFont(weight="bold", size=16),
                 text_color=self.colors["accent"]
-            ).pack(pady=(20, 10))
+            )
+            phase_label.pack(pady=(5, 10), anchor="w")
             
             for tool_text, tool_name in tools:
-                ctk.CTkButton(
+                tool_button = ctk.CTkButton(
                     sidebar,
                     text=tool_text,
                     width=180,
@@ -142,7 +170,8 @@ class VulnHunterApp(ctk.CTk):
                     fg_color=self.colors["button"],
                     hover_color=self.colors["button_hover"],
                     text_color=self.colors["text"]
-                ).pack(pady=5)
+                )
+                tool_button.pack(pady=5)
         
         return sidebar
 
@@ -158,13 +187,187 @@ class VulnHunterApp(ctk.CTk):
                 logo_label = ctk.CTkLabel(self.sidebar, image=logo_photo, text="")
                 logo_label.pack(pady=20)
             else:
+                # Si no existe el logo, crear un texto como alternativa
                 logging.warning(f"Logo not found at {logo_path}")
+                logo_text = ctk.CTkLabel(
+                    self.sidebar,
+                    text="VulnHunter",
+                    font=ctk.CTkFont(size=24, weight="bold"),
+                    text_color=self.colors["accent"]
+                )
+                logo_text.pack(pady=20)
+                
+                # Crear un marco con el color de acento como alternativa visual
+                logo_frame = ctk.CTkFrame(
+                    self.sidebar,
+                    width=150,
+                    height=150,
+                    fg_color=self.colors["accent"]
+                )
+                logo_frame.pack(pady=10)
+                
+                # Añadir texto dentro del marco
+                logo_inner_text = ctk.CTkLabel(
+                    logo_frame,
+                    text="VH",
+                    font=ctk.CTkFont(size=60, weight="bold"),
+                    text_color=self.colors["background"]
+                )
+                logo_inner_text.place(relx=0.5, rely=0.5, anchor="center")
         except Exception as e:
             logging.warning(f"Could not load the logo: {e}")
+            # Crear un texto como alternativa
+            logo_text = ctk.CTkLabel(
+                self.sidebar,
+                text="VulnHunter",
+                font=ctk.CTkFont(size=24, weight="bold"),
+                text_color=self.colors["accent"]
+            )
+            logo_text.pack(pady=20)
 
-    def _create_tools_menu(self):
-        """Creates a tools menu (optional)."""
-        pass  # Not needed because the buttons are created in _create_sidebar
+    def _create_menu(self):
+        """Creates a menu bar with options."""
+        menu_bar = tk.Menu(self)
+        
+        # File menu
+        file_menu = tk.Menu(menu_bar, tearoff=0)
+        file_menu.add_command(label="Home", command=lambda: self.show_subframe("Home"))
+        file_menu.add_separator()
+        file_menu.add_command(label="Exit", command=self._on_closing)
+        menu_bar.add_cascade(label="File", menu=file_menu)
+        
+        # Tools menu
+        tools_menu = tk.Menu(menu_bar, tearoff=0)
+        
+        # Añadir herramientas por fase
+        for phase_title, tools in self.phases:
+            phase_menu = tk.Menu(tools_menu, tearoff=0)
+            for tool_text, tool_name in tools:
+                phase_menu.add_command(
+                    label=tool_text,
+                    command=lambda name=tool_name: self.show_subframe(name)
+                )
+            tools_menu.add_cascade(label=phase_title.split(":")[1].strip(), menu=phase_menu)
+        
+        menu_bar.add_cascade(label="Tools", menu=tools_menu)
+        
+        # Help menu
+        help_menu = tk.Menu(menu_bar, tearoff=0)
+        help_menu.add_command(label="Documentation", command=self._show_documentation)
+        help_menu.add_command(label="About", command=self._show_about)
+        menu_bar.add_cascade(label="Help", menu=help_menu)
+        
+        # Configurar el menú
+        self.configure(menu=menu_bar)
+    
+    def _show_documentation(self):
+        """Muestra la documentación de la aplicación."""
+        # Crear una ventana emergente para la documentación
+        doc_window = ctk.CTkToplevel(self)
+        doc_window.title("VulnHunter Documentation")
+        doc_window.geometry("600x400")
+        doc_window.grab_set()  # Hacer modal
+        
+        # Contenido de la documentación
+        doc_frame = ctk.CTkScrollableFrame(doc_window)
+        doc_frame.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        title = ctk.CTkLabel(
+            doc_frame,
+            text="VulnHunter Documentation",
+            font=ctk.CTkFont(size=20, weight="bold")
+        )
+        title.pack(pady=10)
+        
+        doc_text = """
+        VulnHunter is a comprehensive tool for penetration testing and security analysis.
+        
+        This application provides various tools for different phases of penetration testing:
+        
+        1. RECONNAISSANCE: Gather information about the target.
+        2. ENUMERATION: Identify and list system information.
+        3. VULNERABILITY SEARCH & ANALYSIS: Find potential vulnerabilities.
+        4. EXPLOITATION: Exploit discovered vulnerabilities.
+        5. POST-EXPLOITATION: Actions after successful exploitation.
+        6. REPORTING: Generate reports of findings.
+        
+        Each tool has specific functionality and options. Select a tool from the sidebar to get started.
+        """
+        
+        doc_label = ctk.CTkLabel(
+            doc_frame,
+            text=doc_text,
+            font=ctk.CTkFont(size=14),
+            wraplength=550,
+            justify="left"
+        )
+        doc_label.pack(pady=10)
+        
+        # Botón para cerrar
+        close_button = ctk.CTkButton(
+            doc_window,
+            text="Close",
+            command=doc_window.destroy,
+            width=100
+        )
+        close_button.pack(pady=10)
+    
+    def _show_about(self):
+        """Muestra información sobre la aplicación."""
+        # Crear una ventana emergente para la información
+        about_window = ctk.CTkToplevel(self)
+        about_window.title("About VulnHunter")
+        about_window.geometry("400x300")
+        about_window.grab_set()  # Hacer modal
+        
+        # Contenido de la información
+        about_frame = ctk.CTkFrame(about_window)
+        about_frame.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        title = ctk.CTkLabel(
+            about_frame,
+            text="VulnHunter",
+            font=ctk.CTkFont(size=24, weight="bold")
+        )
+        title.pack(pady=10)
+        
+        version = ctk.CTkLabel(
+            about_frame,
+            text="Version 1.0",
+            font=ctk.CTkFont(size=16)
+        )
+        version.pack(pady=5)
+        
+        about_text = """
+        An advanced web vulnerability scanner and penetration testing tool.
+        
+        Developed for educational and security testing purposes.
+        
+        © 2023 VulnHunter Team
+        """
+        
+        about_label = ctk.CTkLabel(
+            about_frame,
+            text=about_text,
+            font=ctk.CTkFont(size=14),
+            wraplength=350
+        )
+        about_label.pack(pady=10)
+        
+        # Botón para cerrar
+        close_button = ctk.CTkButton(
+            about_window,
+            text="Close",
+            command=about_window.destroy,
+            width=100
+        )
+        close_button.pack(pady=10)
+    
+    def _on_closing(self):
+        """Maneja el cierre de la aplicación."""
+        # Aquí podrías añadir confirmación o guardar configuración
+        self.quit()
+        self.destroy()
 
     def show_subframe(self, name: str):
         """
@@ -254,9 +457,54 @@ class VulnHunterApp(ctk.CTk):
                 extra_label = ctk.CTkLabel(frame, image=ctk_img, text="")
                 extra_label.pack(pady=20)
             else:
-                logging.warning(f"Home logo not found at {extra_logo_path}")
+                # Si no existe logo_home.png, intentar usar logo.png
+                logo_path = Path(__file__).parent / "assets" / "logo.png"
+                if logo_path.exists():
+                    logo_img = Image.open(logo_path)
+                    ctk_img = ctk.CTkImage(logo_img, size=(200, 200))
+                    extra_label = ctk.CTkLabel(frame, image=ctk_img, text="")
+                    extra_label.pack(pady=20)
+                else:
+                    logging.warning(f"No logo found for home screen")
         except Exception as e:
             logging.warning(f"Could not load the home logo: {e}")
+        
+        # Añadir botones de acceso rápido
+        quick_access_frame = ctk.CTkFrame(frame)
+        quick_access_frame.pack(pady=20, fill=tk.X)
+        
+        quick_access_label = ctk.CTkLabel(
+            quick_access_frame,
+            text="Quick Access",
+            font=ctk.CTkFont(size=18, weight="bold")
+        )
+        quick_access_label.pack(pady=10)
+        
+        # Crear una cuadrícula de botones
+        button_frame = ctk.CTkFrame(quick_access_frame)
+        button_frame.pack(pady=10)
+        
+        quick_tools = [
+            ("LFI/RFI Scanner", "LFIRFI"),
+            ("SQL Injection", "SQLi"),
+            ("XSS Scanner", "XSS"),
+            ("Metasploit", "Metasploit")
+        ]
+        
+        for i, (text, tool) in enumerate(quick_tools):
+            row = i // 2
+            col = i % 2
+            
+            button = ctk.CTkButton(
+                button_frame,
+                text=text,
+                command=lambda t=tool: self.show_subframe(t),
+                width=180,
+                height=40,
+                fg_color=self.colors["button"],
+                hover_color=self.colors["button_hover"]
+            )
+            button.grid(row=row, column=col, padx=10, pady=10)
         
         return frame
 
@@ -282,6 +530,27 @@ class VulnHunterApp(ctk.CTk):
             font=ctk.CTkFont(size=16)
         )
         message.pack(pady=20)
+        
+        # Añadir una imagen de "en construcción"
+        try:
+            construction_path = Path(__file__).parent / "assets" / "under_construction.png"
+            if construction_path.exists():
+                construction_img = Image.open(construction_path)
+                ctk_img = ctk.CTkImage(construction_img, size=(200, 200))
+                img_label = ctk.CTkLabel(frame, image=ctk_img, text="")
+                img_label.pack(pady=20)
+        except Exception as e:
+            logging.warning(f"Could not load the construction image: {e}")
+        
+        # Botón para volver a la pantalla de inicio
+        back_button = ctk.CTkButton(
+            frame,
+            text="Back to Home",
+            command=lambda: self.show_subframe("Home"),
+            fg_color=self.colors["button"],
+            hover_color=self.colors["button_hover"]
+        )
+        back_button.pack(pady=20)
         
         return frame
 

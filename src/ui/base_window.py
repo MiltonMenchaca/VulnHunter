@@ -1,40 +1,66 @@
 """
-Base class for all application windows
+Base window class that provides common functionality for all tool windows.
 """
 
-import tkinter as tk
-from tkinter import messagebox
 import customtkinter as ctk
+from tkinter import messagebox
+from src.ui.theme import COLORS
 
 class BaseWindow(ctk.CTkFrame):
-    """Base class for all application windows."""
+    """Base class for all tool windows."""
 
     def __init__(self, parent):
+        """Initialize the base window with common elements."""
         super().__init__(parent)
-        self._setup_ui()
+        
+        # Store reference to parent
+        self.parent = parent
+        
+        # Store theme colors
+        self.colors = COLORS
+        
+        # Configure the main frame (self)
+        self.configure(fg_color=self.colors["background"])
+        
+        # Create the basic layout
+        self._create_base_layout()
 
-    def _setup_ui(self):
-        """Basic UI setup: main_frame with left_frame and right_frame."""
-        # Main frame that will contain both panels
-        self.main_frame = ctk.CTkFrame(self)
-        self.main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=5)
-
-        # Left panel for options/controls
-        self.left_frame = ctk.CTkFrame(self.main_frame)
-        self.left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5, pady=5)
-
-        # Right panel for results or additional content
-        self.right_frame = ctk.CTkFrame(self.main_frame)
-        self.right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=5, pady=5)
+    def _create_base_layout(self):
+        """Creates the basic two-column layout used by all tools."""
+        # Configure grid
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_rowconfigure(0, weight=1)
+        
+        # Create left frame (for controls)
+        self.left_frame = ctk.CTkFrame(
+            self,
+            fg_color=self.colors["secondary_bg"]
+        )
+        self.left_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+        
+        # Create right frame (for output/results)
+        self.right_frame = ctk.CTkFrame(
+            self,
+            fg_color=self.colors["secondary_bg"]
+        )
+        self.right_frame.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
+        
+        # Pack the main frame
+        self.pack(fill="both", expand=True)
 
     def show_error(self, message: str):
-        """Shows an error message in a MessageBox."""
+        """Shows an error message dialog."""
         messagebox.showerror("Error", message)
 
+    def show_warning(self, message: str):
+        """Shows a warning message dialog."""
+        messagebox.showwarning("Warning", message)
+
     def show_info(self, message: str):
-        """Shows an informational message in a MessageBox."""
+        """Shows an information message dialog."""
         messagebox.showinfo("Information", message)
 
-    def show_warning(self, message: str):
-        """Shows a warning message in a MessageBox."""
-        messagebox.showwarning("Warning", message)
+    def show_confirmation(self, message: str) -> bool:
+        """Shows a confirmation dialog and returns True if user confirms."""
+        return messagebox.askyesno("Confirm", message)

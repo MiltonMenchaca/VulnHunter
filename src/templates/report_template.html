@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VulnHunter Security Report</title>
+    <style>
+        :root {
+            --primary-color: #ff5722;
+            --secondary-color: #2a2a2a;
+            --text-color: #333333;
+            --background-color: #ffffff;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --danger-color: #f44336;
+            --info-color: #2196f3;
+            --border-color: #dddddd;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--primary-color);
+        }
+        
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        
+        .report-meta {
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .report-meta div {
+            margin: 10px;
+        }
+        
+        .report-meta h3 {
+            margin: 0 0 5px 0;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+        }
+        
+        .report-meta p {
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            font-size: 1.3em;
+            margin: 0;
+        }
+        
+        .section-content {
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+        
+        th {
+            background-color: #f5f5f5;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px;
+        }
+        
+        .vulnerability {
+            margin-bottom: 20px;
+            border-left: 5px solid var(--danger-color);
+            padding-left: 15px;
+        }
+        
+        .vulnerability h3 {
+            color: var(--danger-color);
+            margin: 0 0 10px 0;
+        }
+        
+        .severity {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        .severity.high {
+            background-color: var(--danger-color);
+            color: white;
+        }
+        
+        .severity.medium {
+            background-color: var(--warning-color);
+            color: white;
+        }
+        
+        .severity.low {
+            background-color: var(--info-color);
+            color: white;
+        }
+        
+        .severity.info {
+            background-color: #9e9e9e;
+            color: white;
+        }
+        
+        .code-block {
+            background-color: #f5f5f5;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        .recommendation {
+            background-color: #e8f5e9;
+            border-left: 5px solid var(--success-color);
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .recommendation h4 {
+            color: var(--success-color);
+            margin: 0 0 10px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        .logo {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            header, footer {
+                background-color: white !important;
+                color: black !important;
+            }
+            
+            header h1 {
+                color: black !important;
+            }
+            
+            .section-header {
+                background-color: white !important;
+                color: black !important;
+                border-bottom: 2px solid black;
+            }
+            
+            .code-block {
+                border: 1px solid black;
+                background-color: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VulnHunter Security Report</h1>
+        <p>Comprehensive Web Application Security Assessment</p>
+    </header>
+    
+    <div class="container">
+        <div class="report-meta">
+            <div>
+                <h3>Target:</h3>
+                <p>{{ target_url }}</p>
+            </div>
+            <div>
+                <h3>Scan Date:</h3>
+                <p>{{ scan_date }}</p>
+            </div>
+            <div>
+                <h3>Report ID:</h3>
+                <p>{{ report_id }}</p>
+            </div>
+            <div>
+                <h3>Scan Duration:</h3>
+                <p>{{ scan_duration }}</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-header">Executive Summary</h2>
+            <div class="section-content">
+                <p>This report presents the findings of a security assessment conducted on {{ target_url }}. The assessment was performed using VulnHunter, an automated security testing tool.</p>
+                
+                <p>A total of {{ total_vulnerabilities }} vulnerabilities were identified:</p>
+                <ul>
+                    <li><strong>High Severity:</strong> {{ high_severity_count }}</li>
+                    <li><strong>Medium Severity:</strong> {{ medium_severity_count }}</li>
+                    <li><strong>Low Severity:</strong> {{ low_severity_count }}</li>
+                    <li><strong>Informational:</strong> {{ info_severity_count }}</li>
+                </ul>
+                
+                <p>The most critical issues that require immediate attention are:</p>
+                <ul>
+                    {% for vuln in critical_vulnerabilities %}
+                    <li>{{ vuln.name }} - {{ vuln.description }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-header">Methodology</h2>
+            <div class="section-content">
+                <p>The security assessment was conducted using the following methodology:</p>
+                <ol>
+                    <li><strong>Reconnaissance:</strong> Gathering information about the target application.</li>
+                    <li><strong>Scanning:</strong> Automated scanning for common vulnerabilities.</li>
+                    <li><strong>Vulnerability Analysis:</strong> Analysis of potential security issues.</li>
+                    <li><strong>Exploitation:</strong> Verification of vulnerabilities through controlled exploitation.</li>
+                    <li><strong>Reporting:</strong> Documentation of findings and recommendations.</li>
+                </ol>
+                
+                <p>The following tools and techniques were used during the assessment:</p>
+                <ul>
+                    {% for tool in tools_used %}
+                    <li>{{ tool }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-header">Vulnerability Details</h2>
+            <div class="section-content">
+                {% for vulnerability in vulnerabilities %}
+                <div class="vulnerability">
+                    <h3>{{ vulnerability.name }}</h3>
+                    <div class="severity {{ vulnerability.severity_class }}">{{ vulnerability.severity }}</div>
+                    
+                    <h4>Description:</h4>
+                    <p>{{ vulnerability.description }}</p>
+                    
+                    <h4>Affected URL:</h4>
+                    <p>{{ vulnerability.url }}</p>
+                    
+                    {% if vulnerability.request %}
+                    <h4>Request:</h4>
+                    <div class="code-block">{{ vulnerability.request }}</div>
+                    {% endif %}
+                    
+                    {% if vulnerability.response %}
+                    <h4>Response:</h4>
+                    <div class="code-block">{{ vulnerability.response }}</div>
+                    {% endif %}
+                    
+                    <h4>Impact:</h4>
+                    <p>{{ vulnerability.impact }}</p>
+                    
+                    <div class="recommendation">
+                        <h4>Recommendation:</h4>
+                        <p>{{ vulnerability.recommendation }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-header">Risk Assessment</h2>
+            <div class="section-content">
+                <p>The overall risk level for the application is <strong>{{ overall_risk }}</strong>.</p>
+                
+                <h3>Risk Matrix</h3>
+                <table>
+                    <tr>
+                        <th>Vulnerability Type</th>
+                        <th>Count</th>
+                        <th>Risk Level</th>
+                    </tr>
+                    {% for risk in risk_matrix %}
+                    <tr>
+                        <td>{{ risk.type }}</td>
+                        <td>{{ risk.count }}</td>
+                        <td>{{ risk.level }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-header">Conclusion and Recommendations</h2>
+            <div class="section-content">
+                <p>{{ conclusion }}</p>
+                
+                <h3>Prioritized Recommendations:</h3>
+                <ol>
+                    {% for recommendation in prioritized_recommendations %}
+                    <li>{{ recommendation }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Report generated by VulnHunter</p>
+        <p>© {{ current_year }} VulnHunter - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

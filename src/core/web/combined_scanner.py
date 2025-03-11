@@ -5,6 +5,16 @@ from .xxe_integration import XXEScanner
 from datetime import datetime
 import jinja2
 import os
+import logging
+
+# Verificar si existe el módulo report_generator
+try:
+    from .report_generator import ReportGenerator
+except ImportError:
+    # Si no existe, creamos una clase básica
+    class ReportGenerator:
+        def generate_report(self, results, format='html'):
+            return f"<html><body><h1>Vulnerability Report</h1><pre>{str(results)}</pre></body></html>"
 
 class CombinedScanner:
     """Combined scanner for LFI/RFI and XXE."""
@@ -12,32 +22,37 @@ class CombinedScanner:
         self.lfi_scanner = LFIRFIScanner()
         self.xxe_scanner = XXEScanner()
         self.waf_detector = WAFDetector()
-        self.report_generator = VulnerabilityReport()
+        self.report_generator = ReportGenerator()
+        self.logger = logging.getLogger(__name__)
         
     def chain_attack(self, url: str) -> Dict[str, Any]:
         """Performs a chained attack combining LFI/RFI and XXE."""
         results = {}
         
-        # Detect WAF
-        response = requests.head(url)
-        waf_type = self.waf_detector.detect_waf(response)
-        if waf_type:
-            bypass_techniques = self.waf_detector.get_bypass_technique(waf_type)
-            results['waf'] = {
-                'type': waf_type,
-                'bypass_techniques': bypass_techniques
-            }
-        
-        # First, attempt XXE
-        xxe_results = self.xxe_scanner.scan(url)
-        if xxe_results:
-            results['xxe'] = xxe_results
-            # If XXE is successful, attempt LFI via XXE
-            lfi_via_xxe = self.lfi_scanner.scan_via_xxe(url, xxe_results)
-            results['lfi_via_xxe'] = lfi_via_xxe
-        else:
-            # Otherwise, attempt normal LFI/RFI
-            results['lfi_rfi'] = self.lfi_scanner.scan_url(url)
+        try:
+            # Detect WAF
+            response = requests.head(url, timeout=10)
+            waf_type = self.waf_detector.detect_waf(response)
+            if waf_type:
+                bypass_techniques = self.waf_detector.get_bypass_technique(waf_type)
+                results['waf'] = {
+                    'type': waf_type,
+                    'bypass_techniques': bypass_techniques
+                }
+            
+            # First, attempt XXE
+            xxe_results = self.xxe_scanner.scan(url)
+            if xxe_results:
+                results['xxe'] = xxe_results
+                # If XXE is successful, attempt LFI via XXE
+                lfi_via_xxe = self.lfi_scanner.scan_via_xxe(url, xxe_results)
+                results['lfi_via_xxe'] = lfi_via_xxe
+            else:
+                # Otherwise, attempt normal LFI/RFI
+                results['lfi_rfi'] = self.lfi_scanner.scan_url(url)
+        except Exception as e:
+            self.logger.error(f"Error in chain attack: {str(e)}")
+            results['error'] = str(e)
             
         return results
 
@@ -105,74 +120,3 @@ class WAFDetector:
     def get_bypass_technique(self, waf_type: str) -> List[str]:
         """Returns bypass techniques specific to the WAF."""
         return self.waf_bypass.get(waf_type, self.waf_bypass['default'])
-
-class VulnerabilityReport:
-    """Vulnerability report generator."""
-    def __init__(self):
-        self.template_dir = os.path.join(os.path.dirname(__file__), 'templates')
-        self.template_loader = jinja2.FileSystemLoader(self.template_dir)
-        self.template_env = jinja2.Environment(loader=self.template_loader)
-        
-    def generate_report(self, results: Dict[str, Any], format: str = 'html') -> str:
-        """Generates a report in the specified format."""
-        template_name = f'report.{format}'
-        template = self.template_env.get_template(template_name)
-        
-        report_data = {
-            'results': results,
-            'timestamp': datetime.now(),
-            'risk_level': self._calculate_risk(results),
-            'summary': self._generate_summary(results)
-        }
-        
-        return template.render(**report_data)
-        
-    def _calculate_risk(self, results: Dict[str, Any]) -> str:
-        """Calculates the risk level based on the results."""
-        score = 0
-        
-        # Calculate score based on found vulnerabilities
-        if results.get('xxe'):
-            score += 8  # XXE is considered high risk
-        if results.get('lfi_via_xxe'):
-            score += 9  # LFI via XXE is very dangerous
-        if results.get('lfi_rfi'):
-            score += 7  # Direct LFI/RFI is medium-high risk
-            
-        # Adjust for WAF presence
-        if results.get('waf'):
-            score -= 2  # WAF presence reduces risk
-        
-        # Determine risk level
-        if score >= 15:
-            return 'CRITICAL'
-        elif score >= 10:
-            return 'HIGH'
-        elif score >= 5:
-            return 'MEDIUM'
-        else:
-            return 'LOW'
-            
-    def _generate_summary(self, results: Dict[str, Any]) -> Dict[str, Any]:
-        """Generates a summary of the results."""
-        summary = {
-            'total_vulnerabilities': 0,
-            'types': [],
-            'waf_present': bool(results.get('waf')),
-            'critical_findings': []
-        }
-        
-        if results.get('xxe'):
-            summary['total_vulnerabilities'] += len(results['xxe'])
-            summary['types'].append('XXE')
-            
-        if results.get('lfi_via_xxe'):
-            summary['total_vulnerabilities'] += len(results['lfi_via_xxe'])
-            summary['types'].append('LFI via XXE')
-            summary['critical_findings'].append('LFI executed via XXE')
-            
-        if results.get('lfi_rfi'):
-            summary['total_vulnerabilities'] += len(results['lfi_rfi'])
-            summary['types'].append('LFI/RFI')
-            
-        return summary

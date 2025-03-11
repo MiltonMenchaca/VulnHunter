@@ -1,0 +1,16 @@
+Esta es una imagen de texto que simula una imagen "en construcción".
+Como no podemos crear archivos de imagen directamente, este archivo de texto
+servirá como un marcador de posición para la imagen "under_construction.png".
+
+En un entorno real, deberías reemplazar este archivo con una imagen PNG real
+que muestre un icono o gráfico de "en construcción".
+
+ASCII Art de "En Construcción":
+
+   _____                 _                   _   _             
+  / ____|               | |                 | | (_)            
+ | |     ___  _ __  ___| |_ _ __ _   _  ___| |_ _  ___  _ __  
+ | |    / _ \| '_ \/ __| __| '__| | | |/ __| __| |/ _ \| '_ \ 
+ | |___| (_) | | | \__ \ |_| |  | |_| | (__| |_| | (_) | | | |
+  \_____\___/|_| |_|___/\__|_|   \__,_|\___|\__|_|\___/|_| |_|
+                                                              

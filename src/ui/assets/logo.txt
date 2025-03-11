@@ -1,0 +1,12 @@
+Este archivo es un marcador de posición para el logo de VulnHunter.
+En un entorno real, deberías reemplazar este archivo con una imagen PNG real
+que muestre el logo de la aplicación.
+
+ASCII Art del logo de VulnHunter:
+
+__     __     _       _   _             _            
+\ \   / /   _| |_ __ | | | |_   _ _ __ | |_ ___ _ __ 
+ \ \ / / | | | | '_ \| |_| | | | | '_ \| __/ _ \ '__|
+  \ V /| |_| | | | | |  _  | |_| | | | | ||  __/ |   
+   \_/  \__,_|_|_| |_|_| |_|\__,_|_| |_|\__\___|_|   
+                                                     
